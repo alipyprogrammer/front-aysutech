@@ -11,5 +11,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="fa" dir="rtl"><body>{children}<AssistantEmbed /></body></html>;
+  return (
+    <html lang="fa" dir="rtl">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300..900&display=swap" />
+      </head>
+      <body>{children}<AssistantEmbed /></body>
+    </html>
+  );
 }

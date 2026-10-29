@@ -17,10 +17,10 @@ const services = [
 ];
 
 const team = [
-  { title: "توسعه Front-end", text: "رابط‌های سریع، دقیق و خوش‌ساخت برای وب و موبایل.", stack: "React · Next.js · TypeScript", icon: Layers3 },
-  { title: "توسعه Back-end", text: "زیرساخت امن و مقیاس‌پذیر برای محصولاتی که قرار است رشد کنند.", stack: "Python · Laravel · Node.js", icon: Network },
-  { title: "هوش مصنوعی و داده", text: "مدل‌های کاربردی برای فروش، پیشنهاد محصول و تصمیم‌گیری بهتر.", stack: "LLM · RAG · Machine Learning", icon: BrainCircuit },
-  { title: "سخت‌افزار و IoT", text: "پیوند نرم‌افزار با سنسورها، کنترلرها و تجهیزات هوشمند.", stack: "IoT · Embedded · Automation", icon: Cpu },
+  { title: "توسعه Front-end", text: "رابط‌های سریع، دقیق و خوش‌ساخت برای وب و موبایل.", icon: Layers3 },
+  { title: "توسعه Back-end", text: "زیرساخت امن و مقیاس‌پذیر برای محصولاتی که قرار است رشد کنند.", icon: Network },
+  { title: "هوش مصنوعی و داده", text: "مدل‌های کاربردی برای فروش، پیشنهاد محصول و تصمیم‌گیری بهتر.", icon: BrainCircuit },
+  { title: "سخت‌افزار و IoT", text: "پیوند نرم‌افزار با سنسورها، کنترلرها و تجهیزات هوشمند.", icon: Cpu },
 ];
 
 const process = [
@@ -114,8 +114,7 @@ export default function Home() {
       <section className="section team-section" id="team">
         <div className="container">
           <div className="section-heading centered-heading"><span className="section-kicker">تیم برنامه‌نویسی</span><h2>یک تیم فنی، برای ساختن محصول کامل</h2><p>متخصص‌هایی که زبان کسب‌وکار را می‌فهمند و آن را به محصولی سریع، امن و قابل توسعه تبدیل می‌کنند.</p></div>
-          <div className="team-grid">{team.map((member, index) => { const Icon = member.icon; return <article className="team-card" key={member.title}><div className="team-card-head"><span className={`team-icon team-icon-${index + 1}`}><Icon size={24} /></span><span className="team-index">0{index + 1}</span></div><h3>{member.title}</h3><p>{member.text}</p><span className="stack-label">{member.stack}</span></article>; })}</div>
-          <div className="tech-strip"><span className="tech-title">ابزارهایی که با آن‌ها می‌سازیم</span>{['NEXT.JS', 'PYTHON', 'LARAVEL', 'REACT', 'NODE.JS', 'WORDPRESS'].map((tech) => <b key={tech}>{tech}</b>)}</div>
+          <div className="team-grid">{team.map((member, index) => { const Icon = member.icon; return <article className="team-card" key={member.title}><div className="team-card-head"><span className={`team-icon team-icon-${index + 1}`}><Icon size={24} /></span><span className="team-index">0{index + 1}</span></div><h3>{member.title}</h3><p>{member.text}</p></article>; })}</div>
         </div>
       </section>
 
